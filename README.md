@@ -2,7 +2,7 @@
 
 Prototipo realizzato da **One Tech S.r.l.** per **AJI Milano**: mostra come un cliente può ordinare su WhatsApp con MILO, l’assistente digitale di One Tech, dal tocco sul sito fino alla consegna.
 
-> Uso riservato. Il prototipo contiene il menu e una foto di AJI, usati solo a scopo dimostrativo. Tutti i dati dei clienti (Giulia Rossi, indirizzi, codici) sono di esempio.
+> Uso riservato. Il prototipo contiene il menu e una foto di AJI, usati solo a scopo dimostrativo. Tutti i dati dei clienti (Giulia Rossi, indirizzi) e gli allergeni dei piatti sono di esempio.
 
 ## Cosa contiene
 
@@ -63,10 +63,14 @@ Serve un account Cloudflare gratuito e una chiave API di Anthropic (https://cons
 ## Cosa si può provare
 
 - Partenza dal sito di AJI con il pulsante “Ordina su WhatsApp” o dal pulsante di un piatto.
-- Cliente con account sul sito (verifica con codice via email; codice demo `482913`) o cliente nuovo con creazione della scheda in chat.
-- Indirizzo scritto e verificato, anche fuori zona; scelta dell’orario dagli slot liberi.
+- **Accesso senza email e senza codice.** L’account si crea in automatico associando nome e cognome al numero di telefono. Se il numero è già registrato (scenario “Numero già registrato”), l’account è già pronto e MILO propone l’indirizzo salvato.
+- **Cliente nuovo**, nell’ordine indicato nelle note privacy: informativa con link (presa visione, non consenso) → nome e cognome → indirizzo verificato, anche fuori zona → ulteriori informazioni per la consegna → promozioni WhatsApp facoltative (Sì/No, nessuna scelta predefinita, revocabili scrivendo STOP) → orario dalla lista.
+- **Allergie e intolleranze.** Domanda prima del menu; se il cliente ne ha, MILO chiede il consenso esplicito e poi mostra la tabella dei 14 allergeni da selezionare. I dati valgono solo per l’ordine in corso e non vengono salvati nel profilo. Catalogo, consigli e schede prodotto nascondono i piatti con gli allergeni selezionati; ogni piatto mostra la sua etichetta allergeni.
 - Catalogo con tutto il menu di AJI, consigli con schede prodotto, regole del menu (bento solo a pranzo, alcolici, gift card).
-- Riepilogo, fattura con modulo, pagamento con carta o contanti, aggiornamenti di consegna.
+- Riepilogo, fattura con modulo, pagamento con carta online o contanti (con “Quanto ti serve di resto?”), aggiornamenti di consegna.
+- **Dopo la consegna:** valutazione con le stelline da 1 a 5 e pulsante “Ordina di nuovo”, che ricarica il carrello precedente e riparte da orario e allergie.
+
+> **Allergeni di esempio.** Le etichette allergeni dei piatti (`ALG` in `index.html`) sono state dedotte da nomi e descrizioni del menu solo per la demo. Vanno sostituite con le schede allergeni ufficiali di AJI prima di qualsiasi uso reale.
 
 ---
 
