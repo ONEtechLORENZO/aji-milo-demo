@@ -1,0 +1,11 @@
+name = "aji-milo"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+# Indirizzo esatto della demo su GitHub Pages, senza barra finale.
+ALLOWED_ORIGIN = "https://NOME-UTENTE.github.io"
+MODEL = "claude-haiku-5-5"
+
+# La chiave API NON va scritta qui: si imposta come segreto con
+#   npx wrangler secret put ANTHROPIC_API_KEY
